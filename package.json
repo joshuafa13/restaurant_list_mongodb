@@ -1,18 +1,19 @@
 {
-  "name": "restaurant_list_mongodb",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "express-handlebars": "^5.1.0",
-    "mongoose": "^5.9.25"
-  }
+	"name": "restaurant_list_mongodb",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon app.js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"seed": "node models/seeds/restaurantSeeder.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.17.1",
+		"express-handlebars": "^5.1.0",
+		"mongoose": "^5.9.25"
+	}
 }
