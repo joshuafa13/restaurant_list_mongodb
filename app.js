@@ -103,6 +103,15 @@ app.post('/restaurants/:id/delete', (req, res) => {
 		.then(() => res.redirect('/'))
 		.catch(error => console.log(error))
 })
+// setup search router
+app.get('/search', (req, res) => {
+	const keyword = req.query.keyword
+	console.log(keyword)
+	Restaurant.find({ name: { $regex: keyword, $options: 'i' } })
+		.lean()
+		.then(restaurants => res.render('index', { restaurants }))
+		.catch(error => console.log(error))
+})
 
 //listen
 app.listen(port, () => {
