@@ -38,8 +38,9 @@
                 <i class="fas fa-star fa-xs"></i>
               </span>
               <a href="./restaurants/{{ this._id }}/edit" class="btn btn-primary" style="display: inline">Edit</a>
-
-              <a href="#" class="btn btn-primary" style="display: inline">Delete</a>
+              <form action="./restaurants/{{this._id}}/delete" method="POST" style="display: inline">
+                <button type="submit" class="btn btn-secondary">Delete</button>
+              </form>
             </div>
           </div>
         </a>
