@@ -59,6 +59,15 @@ app.post('/restaurants', (req, res) => {
 		.then(() => res.redirect('/'))
 		.catch(error => console.log(error))
 })
+// set detail router
+app.get('/restaurants/:id', (req, res) => {
+	const id = req.params.id
+	console.log(id)
+	return Restaurant.findById(id)
+		.lean()
+		.then(restaurant => res.render('detail', { restaurant }))
+		.catch(error => console.log(Error))
+})
 
 //listen
 app.listen(port, () => {
