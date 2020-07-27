@@ -49,10 +49,10 @@ app.post('/restaurants', (req, res) => {
 		name: data.name,
 		name_en: data.name_en,
 		category: data.category,
-		image: data.imageURL,
+		image: data.image,
 		location: data.location,
 		phone: data.phone,
-		google_map: data.googleMapURL,
+		google_map: data.google_map,
 		rating: data.rating,
 		description: data.description,
 	})

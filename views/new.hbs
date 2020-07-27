@@ -1,13 +1,41 @@
-<form action="/restaurants" method="POST" class="justify-content-center">
-  <input type="text" placeholder="name" name="name" value="name" style="display: block">
-  <input type="text" placeholder="name_en" name="name_en" value="name_en" style="display: block">
-  <input type="text" placeholder="category" name="category" value="category" style="display: block">
-  <input type="text" placeholder="imageURL" name="imageURL" value="imageURL" style="display: block">
-  <input type="text" placeholder="location" name="location" value="location" style="display: block">
-  <input type="text" placeholder="phone" name="phone" value="phone" style="display: block">
-  <input type="text" placeholder="googleMapURL" name="googleMapURL" value="googleMapURL" style="display: block">
-  <input type="number" placeholder="rating" name="rating" value="rating" style="display: block" step="0.1">
-  <input type="text" placeholder="description" name="description" value="description" style="display: block">
+<form action="/restaurants" method="POST" style="width: 80%" class="form-block">
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="name">Name: </label>
+    <input type="text" class="form-control ml-2" placeholder="name" name="name" value="name">
+  </div>
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="name_en">English Name: </label>
+    <input type="text" class="form-control ml-2" placeholder="name_en" name="name_en" value="name_en">
+  </div>
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="category">Category: </label>
+    <input type="text" class="form-control ml-2" placeholder="category" name="category" value="category">
+  </div>
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="image">Image URL: </label>
+    <input type="text" class="form-control ml-2" placeholder="image" name="image" value="image">
+  </div>
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="location">Location: </label>
+    <input type="text" class="form-control ml-2" placeholder="location" name="location" value="location">
+  </div>
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="phone">Phone: </label>
+    <input type="text" class="form-control ml-2" placeholder="phone" name="phone" value="phone">
+  </div>
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="google_map">Google Map: </label>
+    <input type="text" class="form-control ml-2" placeholder="google_map" name="google_map" value="google_map">
+  </div>
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="rating">Rating: </label>
+    <input type="text" class="form-control ml-2" placeholder="rating" name="rating" value="rating">
+  </div>
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="description">Description: </label>
+    <input type="text" class="form-control ml-2" placeholder="description" name="description" value="description">
+  </div>
 
-  <button type="submit">Create</button>
+
+  <button type="submit" class="btn btn-primary mt-3">Create</button>
 </form>

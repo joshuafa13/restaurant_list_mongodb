@@ -1,21 +1,48 @@
-<form action="/restaurants/{{restaurant._id}}/edit" method="POST" class="justify-content-center">
-  <input type="text" placeholder="{{restaurant.name}}" name="name" value="{{restaurant.name}}" style="display: block">
-  <input type="text" placeholder="{{restaurant.name_en}}" name="name_en" value="{{name_en}}" style="display: block">
-  <input type="text" placeholder="{{restaurant.category}}" name="category" value="{{restaurant.category}}"
-    style="display: block">
-  <input type="text" placeholder="{{restaurant.image}}" name="image" value="{{restaurant.image}}"
-    style="display: block">
-  <input type="text" placeholder="{{restaurant.location}}" name="location" value="{{restaurant.location}}"
-    style="display: block">
-  <input type="text" placeholder="{{restaurant.phone}}" name="phone" value="{{restaurant.phone}}"
-    style="display: block">
-  <input type="text" placeholder="{{restaurant.google_map}}" name="google_map" value="{{restaurant.google_map}}"
-    style="display: block">
-  <input type="number" placeholder="{{restaurant.rating}}" name="rating" value="{{restaurant.rating}}"
-    style="display: block" step="0.1">
-  <input type="text" placeholder="{{restaurant.description}}" name="description" value="{{restaurant.description}}"
-    style="display: block">
-
-  <button type="submit">Save</button>
-  <a href="/">back</a>
+<form action="/restaurants/{{restaurant._id}}/edit" method="POST" style="width: 80%" class="form-block">
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="name">Name: </label>
+    <input type="text" class="form-control ml-2" placeholder="{{restaurant.name}}" name="name"
+      value="{{restaurant.name}}">
+  </div>
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="name_en">English Name: </label>
+    <input type="text" class="form-control ml-2" placeholder="{{restaurant.name_en}}" name="name_en"
+      value="{{restaurant.name_en}}">
+  </div>
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="category">Category: </label>
+    <input type="text" class="form-control ml-2" placeholder="{{restaurant.category}}" name="category"
+      value="{{restaurant.category}}">
+  </div>
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="image">Image URL: </label>
+    <input type="text" class="form-control ml-2" placeholder="{{restaurant.image}}" name="image"
+      value="{{restaurant.image}}">
+  </div>
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="location">Location: </label>
+    <input type="text" class="form-control ml-2" placeholder="{{restaurant.location}}" name="location"
+      value="{{restaurant.location}}">
+  </div>
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="phone">Phone: </label>
+    <input type="text" class="form-control ml-2" placeholder="{{restaurant.phone}}" name="phone"
+      value="{{restaurant.phone}}">
+  </div>
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="google_map">Google Map: </label>
+    <input type="text" class="form-control ml-2" placeholder="{{restaurant.google_map}}" name="google_map"
+      value="{{restaurant.google_map}}">
+  </div>
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="rating">Rating: </label>
+    <input type="text" class="form-control ml-2" placeholder="{{restaurant.rating}}" name="rating"
+      value="{{restaurant.rating}}">
+  </div>
+  <div class="form-group pl-5 mt-3 mb-3">
+    <label for="description">Description: </label>
+    <input type="text" class="form-control ml-2" placeholder="{{restaurant.description}}" name="description"
+      value="{{restaurant.description}}">
+  </div>
+  <button type="submit" class="btn btn-primary ml-5 mt-1">Save</button>
 </form>
