@@ -36,8 +36,8 @@
   </div>
   <div class="form-group pl-5 mt-3 mb-3">
     <label for="rating">Rating: </label>
-    <input type="text" class="form-control ml-2" placeholder="{{restaurant.rating}}" name="rating"
-      value="{{restaurant.rating}}">
+    <input type="number" min=0 max=5 step="0.1" class="form-control ml-2" placeholder="{{restaurant.rating}}"
+      name="rating" value="{{restaurant.rating}}">
   </div>
   <div class="form-group pl-5 mt-3 mb-3">
     <label for="description">Description: </label>
