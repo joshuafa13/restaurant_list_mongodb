@@ -40,7 +40,7 @@
               <div class="text-right style=" display: inline">
                 <a href="./restaurants/{{ this._id }}/edit" class="btn btn-primary btn-md text-right"
                   style="display: inline">Edit</a>
-                <form action="./restaurants/{{this._id}}/delete" method="POST" style="display: inline">
+                <form action="./restaurants/{{this._id}}?_method=DELETE" method="POST" style="display: inline">
                   <button type="submit" class="btn btn-secondary btn-sm text-right">Delete</button>
                 </form>
               </div>
