@@ -1,13 +1,11 @@
 // include modules
 const express = require('express')
-const app = express()
 const exphbs = require('express-handlebars')
 const mongoose = require('mongoose')
 const Restaurant = require('./models/restaurant.js')
 const bodyParser = require('body-parser')
 
-// variables
-const port = 3000
+const app = express()
 
 // setup mongoose
 mongoose.connect('mongodb://localhost/restaurant_list', { useNewUrlParser: true, useUnifiedTopology: true })
@@ -34,6 +32,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.get('/', (req, res) => {
 	Restaurant.find()
 		.lean()
+		.sort({ _id: 'asc' })
 		.then(restaurants => res.render('index', { restaurants }))
 		.catch(error => console.log(error))
 })
@@ -114,6 +113,6 @@ app.get('/search', (req, res) => {
 })
 
 //listen
-app.listen(port, () => {
-	console.log(`Listening on http://localhost:${port}`)
+app.listen(3000, () => {
+	console.log(`Listening on http://localhost:3000`)
 })
