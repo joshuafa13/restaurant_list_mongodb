@@ -1,4 +1,4 @@
-<form action="/restaurants/{{restaurant._id}}?_method=PUT" method="POST" style="width: 80%" class="form-block">
+<form action="/restaurants/{{restaurant._id}}?_method=PUT" method="POST" style="width: 80%" class="form-block m-5">
   <div class="form-group pl-5 mt-3 mb-3">
     <label for="name">Name: </label>
     <input type="text" class="form-control ml-2" placeholder="{{restaurant.name}}" name="name"
@@ -44,5 +44,5 @@
     <input type="text" class="form-control ml-2" placeholder="{{restaurant.description}}" name="description"
       value="{{restaurant.description}}">
   </div>
-  <button type="submit" class="btn btn-primary ml-5 mt-1">Save</button>
+  <button type="submit" class="btn btn-primary float-right mb-5 ml-5 mt-1">Save</button>
 </form>
