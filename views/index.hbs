@@ -37,11 +37,11 @@
                 {{this.rating}}
                 <i class="fas fa-star fa-xs"></i>
               </span>
-              <div class="text-right style=" display: inline">
-                <a href="./restaurants/{{ this._id }}/edit" class="btn btn-primary btn-md text-right"
-                  style="display: inline">Edit</a>
-                <form action="./restaurants/{{this._id}}?_method=DELETE" method="POST" style="display: inline">
-                  <button type="submit" class="btn btn-secondary btn-sm text-right">Delete</button>
+              <div class="text-right float-right mb-2" style="display: inline">
+                <a href="./restaurants/{{ this._id }}/edit" class="btn btn-primary btn-md"
+                  style="display:inline">Edit</a>
+                <form action="./restaurants/{{this._id}}?_method=DELETE" method="POST" style="display:inline">
+                  <button type="submit" class="btn btn-danger btn-md" style="height:34px">Delete</button>
                 </form>
               </div>
 
