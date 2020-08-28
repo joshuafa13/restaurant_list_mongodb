@@ -18,30 +18,48 @@ router.post('/login', passport.authenticate('local', {
 
 router.post('/register', (req, res) => {
   const { name, email, password, confirmPassword } = req.body
+  const error = []
+  if (!name || !email || !password || !confirmPassword) {
+    error.push({ message: 'Please fill in all fields!' })
+  }
+  if (password !== confirmPassword) {
+    error.push({ message: 'Password must match Confirm Password!' })
+  }
+  if (error.length) {
+    return res.render('register', {
+      error,
+      name,
+      email,
+      password,
+      confirmPassword,
+    })
+  }
   User.findOne({ email })
     .then(user => {
       if (user) {
-        console.log('User already exist!')
-        res.render('register', {
+        error.push({ message: 'User already exist' })
+        return res.render('register', {
+          error,
           name,
           email,
           password,
           confirmPassword,
         })
-      } else {
-        return User.create({
-          name,
-          email,
-          password
-        })
-          .then(() => res.redirect('/users/login'))
-          .catch(err => console.log(err))
       }
+      return User.create({
+        name,
+        email,
+        password
+      })
+        .then(() => res.redirect('/'))
+        .catch(err => console.log(err))
+
     })
 })
 
 router.get('/logout', (req, res) => {
   req.logout()
+  req.flash('success_msg', 'Logged out!')
   res.redirect('/users/login')
 })
 
