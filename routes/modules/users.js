@@ -20,8 +20,8 @@ router.post('/login', passport.authenticate('local', {
 router.post('/register', (req, res) => {
   const { name, email, password, confirmPassword } = req.body
   const error = []
-  if (!name || !email || !password || !confirmPassword) {
-    error.push({ message: 'Please fill in all fields!' })
+  if (!email || !password || !confirmPassword) {
+    error.push({ message: 'Please fill in required fields!' })
   }
   if (password !== confirmPassword) {
     error.push({ message: 'Password must match Confirm Password!' })
