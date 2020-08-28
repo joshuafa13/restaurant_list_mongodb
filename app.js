@@ -23,9 +23,14 @@ app.use(session({
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
 
-usePassport(app)
 // body parser
 app.use(bodyParser.urlencoded({ extended: true }))
+usePassport(app)
+app.use((req, res, next) => {
+	res.locals.isAuthenticated = req.isAuthenticated()
+	res.locals.user = req.user
+	next()
+})
 // setup router
 app.use(routes)
 
