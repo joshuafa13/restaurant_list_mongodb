@@ -2,6 +2,7 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const session = require('express-session')
+const usePassport = require('./config/passport')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 
@@ -21,6 +22,8 @@ app.use(session({
 
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
+
+usePassport(app)
 // body parser
 app.use(bodyParser.urlencoded({ extended: true }))
 // setup router
