@@ -7,12 +7,10 @@ const User = require('../user')
 const db = require('../../config/mongoose')
 
 const SEED_USER_1 = {
-	name: 'user1',
 	email: 'user1@example.com',
 	password: '12345678'
 }
 const SEED_USER_2 = {
-	name: 'user2',
 	email: 'user2@example.com',
 	password: '12345678'
 }
@@ -22,7 +20,6 @@ db.once('open', () => {
 		.genSalt(10)
 		.then(salt => bcrypt.hash(SEED_USER_1.password, salt))
 		.then(hash => User.create({
-			name: SEED_USER_1.name,
 			email: SEED_USER_1.email,
 			password: hash,
 		}))
@@ -72,7 +69,6 @@ db.once('open', () => {
 		.genSalt(10)
 		.then(salt => bcrypt.hash(SEED_USER_2.password, salt))
 		.then(hash => User.create({
-			name: SEED_USER_2.name,
 			email: SEED_USER_2.email,
 			password: hash,
 		}))

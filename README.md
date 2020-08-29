@@ -4,11 +4,16 @@ A simple web app created by Node.js and Express with MongoDB to search for resta
 
 ## Features
 
-- show all restaurants from seed data-base
-- search restaurant by name
-- edit restaurant information
-- delete restaurant
-- add new restaurant
+- register account with email
+- login with registered account
+- login with facebook account
+- add new restaurant to your account
+- edit restaurant in your account
+- delete restaurant in your account
+
+## Project Image
+
+
 
 ## Installation & Execution
 
