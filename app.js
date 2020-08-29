@@ -7,8 +7,15 @@ const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const flash = require('connect-flash')
 
-const app = express()
+if (process.env.NODE_ENV !== 'production') {
+	require('dotenv').config()
+}
+
+const PORT = process.env.PORT
+
 const routes = require('./routes')
+
+const app = express()
 require('./config/mongoose')
 
 // setup express handlebars
@@ -16,7 +23,7 @@ app.engine('hbs', exphbs({ defaultLayout: 'main', extname: 'hbs' }))
 app.set('view engine', 'hbs')
 
 app.use(session({
-	secret: 'ThisIsMySecret',
+	secret: process.env.SESSION_SECRET,
 	resave: false,
 	saveUninitialized: true,
 }))
@@ -40,6 +47,6 @@ app.use((req, res, next) => {
 app.use(routes)
 
 //listen
-app.listen(3000, () => {
-	console.log(`Listening on http://localhost:3000`)
+app.listen(PORT, () => {
+	console.log(`Listening on http://localhost:${PORT}`)
 })
