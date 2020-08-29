@@ -13,7 +13,7 @@ A simple web app created by Node.js and Express with MongoDB to search for resta
 
 ## Project Image
 
-https://github.com/joshuafa13/restaurant_list_mongodb/blob/master/public/img/Screen%20Shot%202020-08-29%20at%2017.04.43.png
+![image](https://github.com/joshuafa13/restaurant_list_mongodb/blob/master/public/img/Screen%20Shot%202020-08-29%20at%2017.04.43.png)
 
 
 ## Installation & Execution
